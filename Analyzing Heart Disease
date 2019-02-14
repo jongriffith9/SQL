@@ -1,0 +1,42 @@
+SELECT * FROM patients
+LIMIT 5;
+
+SELECT * FROM panels
+LIMIT 5;
+
+SELECT * FROM recommended_values
+LIMIT 5;
+
+DELETE FROM panels
+WHERE ID = 'ID';
+SELECT * FROM panels
+LIMIT 5;
+
+UPDATE patients
+SET Status = 'active'
+WHERE ID = 7;
+
+SELECT *
+FROM patients
+WHERE ID = 7;
+
+CREATE TABLE inactive_patients
+AS ( SELECT * 
+    FROM patients 
+    WHERE Status = "inactive");
+
+DELETE FROM patients 
+WHERE status = "inactive";
+          
+ ALTER TABLE patients
+ RENAME TO active_patients;
+
+SELECT COUNT(*)
+FROM inactive_patients;
+
+
+
+
+
+
+
